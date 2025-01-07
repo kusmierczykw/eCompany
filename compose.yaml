@@ -1,0 +1,11 @@
+name: eCompany
+services:
+  client:
+    container_name: client
+    tty: true
+    build:
+      context: ./docker/node
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./application:/application
